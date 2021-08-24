@@ -1,0 +1,64 @@
+@import 'variables.scss';
+
+.input-container {
+    position: relative;
+    width: 100%;
+
+    input {
+        display: block;
+        border: none;
+        border-radius: $border-radius;
+        width: 100%;
+        margin: 1.1em 0 0 0;
+        text-align: left;
+        font-family: $font-family;
+        background-color: $grey;
+        color: black;
+        font-size: 3.5vw;
+
+        &.with-label {
+            padding: 1.75em 1.2em 1.2em 15px;
+        }
+
+        &.without-label {
+            padding: 1em;
+        }
+
+        &::placeholder {
+            color: rgba($color: #000000, $alpha: 0.3);
+        }
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 0 1px 1px darkgrey;
+        }
+
+        &::-webkit-search-cancel-button {
+            -webkit-appearance: none;
+        }
+    }
+
+    .input-label {
+        position: absolute;
+        top: 7.5px;
+        left: 15px;
+        font-size: 11px;
+        color: #AAAAAA;
+    }
+
+    &.input-disabled input {
+        color: #AAAAAA;
+    }
+
+    &.password-bar input {
+        margin-bottom: 0px;
+    }
+
+    .input-clear-button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 15px;
+        width: 18px;
+    }
+}
