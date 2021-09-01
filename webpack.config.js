@@ -87,5 +87,6 @@ module.exports = {
         minimizer: [
             new CssMinimizerPlugin(),
         ],
+        usedExports: true, // tells webpack to tree-shake
     },
 };

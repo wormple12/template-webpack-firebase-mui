@@ -1,7 +1,6 @@
 import { SWSearch } from '@Types/SWSearch';
-import IDatabase from '../IDatabase';
 
-class mockupDB implements IDatabase {
+class mockupDB {
     search: SWSearch = { budget: 100, minHDRating: 1.0, preferredPilot: "Luke Skywalker" };
 
     getSearch(): SWSearch {

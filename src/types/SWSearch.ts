@@ -9,3 +9,9 @@ export type SWSearch = {
     minHDRating: number,
     preferredPilot: Pilot | "",
 }
+
+export const defaultSWSearch: SWSearch = {
+    budget: 200,
+    minHDRating: 1.0,
+    preferredPilot: "Luke Skywalker"
+};

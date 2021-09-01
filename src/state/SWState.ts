@@ -1,6 +1,5 @@
 import { atom, atomFamily, AtomEffect, selector, selectorFamily } from 'recoil';
-import IDatabase from '@Services/IDatabase';
-import DB from '@Services/temp/mockupDB';
+import db from '@Services/firebase/SWDatabase';
 import SWFetcher from '@Services/temp/swFetcher';
 import { recoilPersist } from 'recoil-persist';
 import { SWSearch } from '@Types/SWSearch';
@@ -11,15 +10,19 @@ const { persistAtom } = recoilPersist({
 });
 const syncStorageEffect: AtomEffect<SWSearch> = ({ onSet }) => {
     // Subscribe to local changes and update the server value
+    let updateController: any = undefined;
+
     onSet((searchState) => {
-        DB.updateSearch(searchState as SWSearch);
+        clearTimeout(updateController);
+        updateController = setTimeout(() => {
+            db.updateSearch(searchState as SWSearch);
+        }, 2500);
     });
 };
 
 const getInitialState = selector({
     key: 'SWState/Search/Default',
     get: async ({ get }) => {
-        const db: IDatabase = DB;
         return await db.getSearch();
     }
 });
