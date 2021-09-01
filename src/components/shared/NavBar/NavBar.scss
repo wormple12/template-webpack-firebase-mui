@@ -10,6 +10,10 @@ ul.header-nav-bar {
     li {
         float: left;
 
+        &.right {
+            float: right;
+        }
+
         a {
             display: block;
             color: $black;

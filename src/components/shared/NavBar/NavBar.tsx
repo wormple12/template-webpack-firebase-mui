@@ -1,21 +1,31 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import './NavBar.scss';
+import { useRecoilState } from 'recoil';
 
-type Props = {
-    tabs: {
-        label: string,
-        path: string,
-        exact?: boolean,
-    }[]
+import './NavBar.scss';
+import { userAuthState } from '@State/UserState';
+
+type NavTab = {
+    label: string,
+    path: string,
+    exact?: boolean,
+    onClick?: () => void,
+    float?: "right" | "left",
+}
+export type NavBarProps = {
+    noAuthTabs: NavTab[],
+    secureTabs: NavTab[],
 }
 
-export const NavBar: React.FC<Props> = props => {
+export const NavBar: React.FC<NavBarProps> = props => {
+    const [isUserSignedIn, setIsUserSignedIn] = useRecoilState<boolean>(userAuthState);
+    const tabs = isUserSignedIn ? props.secureTabs : props.noAuthTabs;
+
     return (
         <ul className="header-nav-bar">
-            {props.tabs.map((tab, index) => (
-                <li key={`${tab.label}-${index}`}>
-                    <NavLink activeClassName="active" exact={tab.exact} to={tab.path}>
+            {tabs.map((tab, index) => (
+                <li key={`${tab.label}-${index}`} className={tab.float ? tab.float : ""}>
+                    <NavLink activeClassName="active" exact={tab.exact} to={tab.path} onClick={tab.onClick}>
                         {tab.label}
                     </NavLink>
                 </li>

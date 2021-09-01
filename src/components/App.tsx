@@ -7,19 +7,18 @@ import "@Style/variables.scss";
 
 import { NavBar } from "./shared";
 import { SuspenseLoader, ErrorBoundary } from "./utilities";
-import { MainRoutes } from './Routes';
+import { MainRoutes, navTabs } from './Routes';
 
-const App = () => {
+const App: React.FC = () => {
   return (
     <RecoilRoot>
       <ErrorBoundary>
         <Router>
           <header>
-            <NavBar tabs={[
-              { label: "Home", path: "/", exact: true },
-              { label: "Section 1", path: "/section01", exact: true },
-              { label: "Section 2", path: "/section02" },
-            ]} />
+            <NavBar
+              noAuthTabs={navTabs.noAuthTabs}
+              secureTabs={navTabs.secureTabs}
+            />
           </header>
           <main>
             <div id="main-container">

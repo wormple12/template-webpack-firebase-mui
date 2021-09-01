@@ -11,8 +11,6 @@
 
 - Finishing touches: Make basic design as simple, structured and responsible as possible.
 
-- Auth functionality with Firebase?
-
 - Test with Jest/Cypress.
 
 ### Project Pipeline
