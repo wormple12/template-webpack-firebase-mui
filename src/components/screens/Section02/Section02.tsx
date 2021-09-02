@@ -33,6 +33,7 @@ const SuspendedGrid: React.FC<{ resource }> = ({ resource }) => {
         <Table
             id="swStarship-table"
             data={starships}
+            caption="Starships available for purchase that fit your requirements."
         />
     )
 };

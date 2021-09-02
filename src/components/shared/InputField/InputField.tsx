@@ -31,12 +31,17 @@ export const InputField: React.FC<Props> = (props) => {
 
   return (
     <div
-      id={props.id}
-      className={`input-container ${props.className}`}
+      id={props.id && props.id}
+      className={`input-container ${props.className && props.className}`}
       onClick={props.onClick}
     >
-      {props.label && <label className="input-label">{props.label}</label>}
+      {props.label &&
+        <label className="input-label" htmlFor={props.id && `${props.id}-field`}>
+          {props.label}
+        </label>
+      }
       <input
+        id={props.id && `${props.id}-field`}
         className={props.label ? "with-label" : "without-label"}
         value={props.value}
         type={type}

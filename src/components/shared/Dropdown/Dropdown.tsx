@@ -3,6 +3,8 @@ import './Dropdown.scss';
 
 import { InputField } from '../';
 
+/* OBS! This component is currently not accessible for screen readers. */
+
 type Props = {
     label: string,
     options: string[],
@@ -46,15 +48,3 @@ export const Dropdown: React.FC<Props> = props => {
         </InputField>
     );
 };
-
-{/* <div className="dropdown-container">
-            {props.label && <label className="input-label">{props.label}</label>}
-            <input value={props.value} onClick={openDropdown} className="dropbtn" disabled />
-            <div ref={myRef} className={`dropdown-content ${showDropdown ? "dropdown-open" : "dropdown-closed"}`}>
-                {props.options.map(option =>
-                    <a key={option} href="#" onClick={() => props.setValue(option)}>
-                        {option}
-                    </a>
-                )}
-            </div>
-        </div> */}

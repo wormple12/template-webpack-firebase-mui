@@ -25,6 +25,7 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             title: 'Template Web App',
+            lang: "en",
             favicon: "./style/favicon/favicon.ico"
         }),
         new MiniCssExtractPlugin({

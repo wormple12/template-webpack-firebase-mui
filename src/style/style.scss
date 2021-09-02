@@ -22,13 +22,11 @@ a {
 
 body * {
     -webkit-overflow-scrolling: touch;
-    -webkit-tap-highlight-color: transparent;
-    /* Disable iOS touch highlight */
+    //-webkit-tap-highlight-color: transparent; /* Disable iOS touch highlight */
     font-family: $font-family-inter, Helvetica, sans-serif;
 
     &:not(input) {
-        -webkit-user-select: none;
-        /* Disable iOS text selection */
+        //-webkit-user-select: none; /* Disable iOS text selection */
     }
 }
 
@@ -63,25 +61,21 @@ main {
     height: 100%;
     overflow-y: auto;
 
-    #main-container {
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
         width: 500px;
         max-width: 100%;
 
-        .content {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
+        form {
             width: 100%;
+            padding-bottom: 10px;
 
-            form {
+            .inline {
+                display: inline-flex;
                 width: 100%;
-                padding-bottom: 10px;
-
-                .inline {
-                    display: inline-flex;
-                    width: 100%;
-                    margin: 0px;
-                }
+                margin: 0px;
             }
         }
     }

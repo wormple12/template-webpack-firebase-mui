@@ -6,6 +6,7 @@ type Props<T, K extends keyof T> = {
     className?: string,
     data: T[],
     columns?: { key: K, header: string }[],
+    caption?: string,
 };
 
 export const Table = <T, K extends keyof T>(props: Props<T, K>): JSX.Element => {
@@ -26,6 +27,7 @@ export const Table = <T, K extends keyof T>(props: Props<T, K>): JSX.Element => 
     return (
         <div id={props.id} className={`table-container ${props.className}`}>
             <table>
+                {props.caption && <caption>{props.caption}</caption>}
                 <thead><tr>
                     {columns.map((e, index) => (
                         <th key={`hCell-${index}`}>

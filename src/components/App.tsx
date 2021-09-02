@@ -21,11 +21,9 @@ const App: React.FC = () => {
             />
           </header>
           <main>
-            <div id="main-container">
-              <React.Suspense fallback={<SuspenseLoader />}>
-                <MainRoutes />
-              </React.Suspense>
-            </div>
+            <React.Suspense fallback={<SuspenseLoader />}>
+              <MainRoutes />
+            </React.Suspense>
           </main>
         </Router>
       </ErrorBoundary>
