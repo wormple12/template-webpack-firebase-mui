@@ -1,6 +1,11 @@
 ### Template Development Pipeline
 
 - Integrate with Firestore (primarily with the purpose of testing if it works)
+    - Set up security rules.
+
+- Accessibility?
+
+- Test with Jest/Cypress.
 
 - Find optimal method to split into several versions of web design; (1) PC/Tablet and (2) Mobile.
     - Material UI?
@@ -10,8 +15,6 @@
     - Instead check out React Query.
 
 - Finishing touches: Make basic design as simple, structured and responsible as possible.
-
-- Test with Jest/Cypress.
 
 ### Project Pipeline
 
