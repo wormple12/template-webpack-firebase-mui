@@ -1,6 +1,11 @@
 {
     "presets": [
-        "@babel/preset-env",
+        [
+            "@babel/preset-env",
+            {
+                "modules": false /* possibly required for tree shaking optimization */
+            }
+        ],
         "@babel/preset-typescript",
         "@babel/preset-react"
     ]

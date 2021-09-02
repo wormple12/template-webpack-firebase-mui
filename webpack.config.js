@@ -2,6 +2,7 @@ const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
     mode: 'development',
@@ -84,10 +85,17 @@ module.exports = {
             '@Services': path.resolve(__dirname, 'src/services/'),
         },
     },
+    // Optimization Guides used (tree shaking!):
+    // https://webpack.js.org/guides/tree-shaking/
+    // https://developers.google.com/web/fundamentals/performance/optimizing-javascript/tree-shaking
+    // https://medium.com/@craigmiller160/how-to-fully-optimize-webpack-4-tree-shaking-405e1c76038
+    // Needs to have sideEffects handled before tree shaking works.
+    // Only works in production mode.
     optimization: {
+        usedExports: true, // tells webpack to tree-shake
         minimizer: [
             new CssMinimizerPlugin(),
+            new TerserPlugin(),
         ],
-        usedExports: true, // tells webpack to tree-shake
     },
 };
