@@ -4,23 +4,15 @@ const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    mode: 'development',
+    mode: 'production',
     context: path.resolve(__dirname, 'src'),
     entry: "./index.tsx",
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: "[name].bundle.js",
+        sourceMapFilename: "[name].js.map",
         clean: true,
         publicPath: '/',
-    },
-    devtool: 'inline-source-map',
-    devServer: {
-        port: 9000,
-        contentBase: path.join(__dirname, 'dist'),
-        compress: true,
-        open: true,
-        hot: true,
-        historyApiFallback: true,
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -89,5 +81,9 @@ module.exports = {
             new CssMinimizerPlugin(),
         ],
         usedExports: true, // tells webpack to tree-shake
+        splitChunks: {
+            minSize: 10000,
+            maxSize: 250000,
+        }
     },
 };

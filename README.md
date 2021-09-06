@@ -3,8 +3,6 @@
 - Integrate with Firestore (primarily with the purpose of testing if it works)
     - Set up security rules.
 
-- Accessibility?
-
 - Test with Jest/Cypress.
 
 - Find optimal method to split into several versions of web design; (1) PC/Tablet and (2) Mobile.
