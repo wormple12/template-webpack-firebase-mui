@@ -16,12 +16,12 @@ export const SignIn: React.FC<Props> = props => {
     }
 
     return (
-        <div className="content">
+        <section className="content">
             <h1>Testing Authentication</h1>
             <p className="sectionDesc"></p>
             <Button variant="alt" onClick={onSubmit}>
                 Sign in with Google
             </Button>
-        </div>
+        </section>
     );
 };

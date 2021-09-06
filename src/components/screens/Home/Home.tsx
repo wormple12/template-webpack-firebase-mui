@@ -17,7 +17,7 @@ export const Home: React.FC<Props> = props => {
     }
 
     return (
-        <div className="content">
+        <section className="content">
             <h1>Starship Search</h1>
             <p className="sectionDesc">Fill in information below. Recoil will save it.</p>
             <br />
@@ -53,6 +53,6 @@ export const Home: React.FC<Props> = props => {
             >
                 Continue!
             </Button>
-        </div>
+        </section>
     );
 };

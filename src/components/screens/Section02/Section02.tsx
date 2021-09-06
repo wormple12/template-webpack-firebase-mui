@@ -10,7 +10,7 @@ export const Section02: React.FC = props => {
     const pilot = useRecoilValue(swPilotState);
 
     return (
-        <div className="content">
+        <section className="content">
             {/* Needs error boundary for handling fetch errors */}
             <Suspense fallback={<SuspenseLoader />}>
                 <h1>Testing Suspense</h1>
@@ -21,7 +21,7 @@ export const Section02: React.FC = props => {
                 <h3>Pilot:</h3>
                 <SuspendedInfoBox resource={pilot} />
             </Suspense>
-        </div>
+        </section>
     );
 };
 
