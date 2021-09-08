@@ -1,9 +1,6 @@
 ### Template Development Pipeline
 
-- Integrate with Firestore (primarily with the purpose of testing if it works)
-    - Set up security rules.
-
-- Test with Jest/Cypress.
+- Test with Jest/Cypress OR Jest/Puppeteer?
 
 - Find optimal method to split into several versions of web design; (1) PC/Tablet and (2) Mobile.
     - Material UI?
@@ -13,6 +10,7 @@
     - Instead check out React Query.
 
 - Finishing touches: Make basic design as simple, structured and responsible as possible.
+    - Feature-driven architecture? https://www.blog.duomly.com/how-to-create-frontend-project-structure-that-scales-and-is-easy-to-maintain/
 
 ### Project Pipeline
 

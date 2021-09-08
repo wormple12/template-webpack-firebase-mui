@@ -1,6 +1,6 @@
-import { atom, atomFamily, AtomEffect, selector, selectorFamily } from 'recoil';
+import { atom, AtomEffect, selector } from 'recoil';
 import db from '@Services/firebase/SWDatabase';
-import SWFetcher from '@Services/temp/swFetcher';
+import SWFetcher from '@Services/swapi/swFetcher';
 import { recoilPersist } from 'recoil-persist';
 import { SWSearch } from '@Types/SWSearch';
 
