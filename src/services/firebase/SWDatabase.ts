@@ -1,15 +1,21 @@
 import { doc, getDoc, setDoc } from '@firebase/firestore';
 import { firestore } from './firebase.config';
+import { getCurrentUserID } from './auth';
 import { SWSearch, defaultSWSearch } from '@Types/SWSearch';
 
 class SWDatabase {
     async getSearch(): Promise<SWSearch> {
-        const docSnap = await getDoc(doc(firestore, 'tempData', 'SWSearch'));
-        if (docSnap.exists()) return docSnap.data() as SWSearch;
-        else return defaultSWSearch;
+        const userId = getCurrentUserID();
+        if (userId) {
+            const docSnap = await getDoc(doc(firestore, 'tempData', 'users', userId, 'SWSearch'));
+            if (docSnap.exists()) return docSnap.data() as SWSearch;
+        }
+        return defaultSWSearch;
     }
     async updateSearch(search: SWSearch): Promise<void> {
-        return await setDoc(doc(firestore, 'tempData', 'SWSearch'), search);
+        const userId = getCurrentUserID();
+        if (userId)
+            await setDoc(doc(firestore, 'tempData', 'users', userId, 'SWSearch'), search);
     }
 }
 
