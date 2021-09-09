@@ -36,30 +36,6 @@ const swFetcher = () => {
     }
 };
 
-/* const makeOptions = (method: string, body?: any) => {
-    const opts: any = {
-        method: method,
-        headers: {
-            "Content-type": "application/json",
-            Accept: "application/json"
-        }
-    };
-    if (body) {
-        opts.body = JSON.stringify(body);
-    }
-    return opts;
-};
-
-function handleHttpErrors(res: any) {
-    if (!res.ok) {
-        return Promise.reject({ status: res.status, fullError: res.json() });
-    } else if (res.status !== 204) {
-        return res.json();
-    } else {
-        return Promise.resolve({ rip: "" });
-    }
-} */
-
 // Note: this is a simplified implementation of Suspense-friendly fetching such as Relay and React Query
 // It should not be used for production.
 // Origin: https://www.telerik.com/blogs/render-as-you-fetch-with-react-suspense
