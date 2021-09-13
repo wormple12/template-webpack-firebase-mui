@@ -1,7 +1,5 @@
 ### Template Development Pipeline
 
-- Test with Jest/Cypress OR Jest/Puppeteer?
-
 - Find optimal method to split into several versions of web design; (1) PC/Tablet and (2) Mobile.
     - Material UI?
 
