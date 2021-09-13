@@ -1,3 +1,16 @@
+# Template Project
+This is a ready-to-use template project for personal projects.
+
+The current tech stack includes:
+- Webpack, Babel and TypeScript
+- ReactJS
+    - using Suspense API
+    - w. Recoil as state management
+- SCSS as preprocessor CSS
+- Firebase as database and hosting
+- Cypress as testing framework
+- Lottie for animated SVGs
+
 ### Template Development Pipeline
 
 - Find optimal method to split into several versions of web design; (1) PC/Tablet and (2) Mobile.
