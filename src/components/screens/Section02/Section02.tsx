@@ -16,16 +16,16 @@ export const Section02: React.FC = props => {
                 <h1>Testing Suspense</h1>
                 <p className="sectionDesc">Here are the results that pass your requirements.</p>
                 <br />
-                <h3>Starships:</h3>
+                <h2>Starships:</h2>
                 <SuspendedGrid resource={starships} />
-                <h3>Pilot:</h3>
+                <h2>Pilot:</h2>
                 <SuspendedInfoBox resource={pilot} />
             </Suspense>
         </section>
     );
 };
 
-const SuspendedGrid: React.FC<{ resource }> = ({ resource }) => {
+const SuspendedGrid: React.FC<{ resource; }> = ({ resource }) => {
     let starships = resource.read();
     starships.forEach(e => e.cost_in_credits = `${parseInt(e.cost_in_credits, 10) / 1000}K`);
 
@@ -35,10 +35,10 @@ const SuspendedGrid: React.FC<{ resource }> = ({ resource }) => {
             data={starships}
             caption="Starships available for purchase that fit your requirements."
         />
-    )
+    );
 };
 
-const SuspendedInfoBox: React.FC<{ resource }> = ({ resource }) => {
+const SuspendedInfoBox: React.FC<{ resource; }> = ({ resource }) => {
     const pilot = resource.read();
 
     return (

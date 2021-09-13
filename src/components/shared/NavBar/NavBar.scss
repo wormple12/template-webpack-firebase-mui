@@ -1,4 +1,4 @@
-@import 'variables.scss';
+@import "variables.scss";
 
 ul.header-nav-bar {
     list-style-type: none;
@@ -17,9 +17,10 @@ ul.header-nav-bar {
         a {
             display: block;
             color: $black;
-            text-align: center;
-            padding: 14px 16px;
             text-decoration: none;
+            text-align: center;
+            padding: 2vh clamp(7px, 3vw, 14px);
+            font-size: $font-size-btn;
         }
 
         a:hover:not(.active) {

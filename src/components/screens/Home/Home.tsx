@@ -14,7 +14,7 @@ export const Home: React.FC<Props> = props => {
     const onFormSubmit = (evt) => {
         evt.preventDefault();
         props.history.push("/section01");
-    }
+    };
 
     return (
         <section className="content">
@@ -47,7 +47,6 @@ export const Home: React.FC<Props> = props => {
                 />
             </form>
             <Button
-                variant="alt"
                 type="submit"
                 form="temp-form"
             >

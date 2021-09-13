@@ -44,9 +44,17 @@ button {
     font-family: $font-family-inter;
     color: black;
 }
-
-p {
+p,
+label,
+span {
     margin: 0;
+    font-size: $font-size-desc;
+}
+h1 {
+    font-size: $font-size-h1;
+}
+h2 {
+    font-size: $font-size-h2;
 }
 
 input,

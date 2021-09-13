@@ -7,8 +7,7 @@
     - Relay requires GraphQL backend... see https://medium.com/@lukepighetti/yes-you-can-query-firebase-with-graphql-e79a45990f22
     - Instead check out React Query.
 
-- Finishing touches: Make basic design as simple, structured and responsible as possible.
-    - Feature-driven architecture? https://www.blog.duomly.com/how-to-create-frontend-project-structure-that-scales-and-is-easy-to-maintain/
+- Feature-driven architecture? https://www.blog.duomly.com/how-to-create-frontend-project-structure-that-scales-and-is-easy-to-maintain/
 
 ### Project Pipeline
 

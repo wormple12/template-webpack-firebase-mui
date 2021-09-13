@@ -3,7 +3,7 @@ import { default as React } from 'react';
 import './Button.scss';
 
 interface Props {
-  variant?: 'default' | 'alt' | 'white' | 'tint';
+  variant?: 'default' | 'alt';
   onClick?: () => void;
   disabled?: boolean;
   type?: React.ButtonHTMLAttributes<HTMLButtonElement>['type'];

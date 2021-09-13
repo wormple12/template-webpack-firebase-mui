@@ -7,7 +7,7 @@ export const NoMatch: React.FC = props => {
         <section className="content">
             <h1>The page was not found.</h1>
             <p className="sectionDesc"></p>
-            <Button variant="alt"><Link to={"/"}>
+            <Button><Link to={"/"}>
                 Return to home page?
             </Link></Button>
         </section>

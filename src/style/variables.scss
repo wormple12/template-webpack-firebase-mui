@@ -1,16 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600;700&display=swap");
 
+/* COLOR SCHEME */
 $white: #ffffff;
 $colored: #9edfa0;
 $grey: #f4f4f4;
 $black: #000000;
-$border-radius: 6px;
 
-$font-family: 'Roboto',
-sans-serif;
-$roboto-mono: 'Roboto Mono',
-monospace,
-sans-serif;
-$font-family-inter: 'Inter',
-sans-serif;
+/* VISUAL DETAILS */
+$border-radius: 6px;
+$padding-input-sides: clamp(7px, 3vw, 14px);
+
+/* FONT SETTINGS */
+$font-family: "Roboto", sans-serif;
+$roboto-mono: "Roboto Mono", monospace, sans-serif;
+$font-family-inter: "Inter", sans-serif;
+$font-size-desc: clamp(10px, 2.8vw, 14px);
+$font-size-btn: clamp(10px, 3.2vw, 16px);
+$font-size-h1: clamp(16px, 4.5vw, 28px);
+$font-size-h2: clamp(12px, 3.2vw, 20px);
+$inter-medium: 500;

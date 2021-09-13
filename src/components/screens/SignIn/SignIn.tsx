@@ -13,13 +13,13 @@ export const SignIn: React.FC<Props> = props => {
         } catch (error) {
             throw new Error(`Authentication failed...\n${error}`);
         }
-    }
+    };
 
     return (
         <section className="content">
             <h1>Testing Authentication</h1>
             <p className="sectionDesc"></p>
-            <Button variant="alt" onClick={onSubmit}>
+            <Button onClick={onSubmit}>
                 Sign in with Google
             </Button>
         </section>
