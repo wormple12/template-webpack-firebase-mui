@@ -1,6 +1,4 @@
 {
-    "pluginsFile": false,
-    "supportFile": false,
-    "fixturesFolder": false,
-    "video": false
+    "video": false,
+    "componentFolder": "cypress/components"
 }
