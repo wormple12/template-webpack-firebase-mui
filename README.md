@@ -25,7 +25,6 @@ The current tech stack includes:
 ### Project Pipeline
 
 - Initial portfolio showcasing everything from Santanism to PC Builder, Spellcaster's Archive, Mapmaker Framework and the Unity Stealth Game to placeholders for eventual later projects like the Black Lemon Test Case.
-    - How to display videos with good performance in React? See https://www.npmjs.com/package/react-player !
 
 - Black Lemon Test Case for pc and mobile.
 
