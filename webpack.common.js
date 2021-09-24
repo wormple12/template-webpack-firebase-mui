@@ -1,5 +1,4 @@
 const path = require('path');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
@@ -20,9 +19,6 @@ module.exports = {
             title: 'Template Web App',
             lang: "en",
             favicon: "./style/favicon/favicon.ico"
-        }),
-        new MiniCssExtractPlugin({
-            filename: "[name].css"
         }),
     ],
     module: {
@@ -45,7 +41,7 @@ module.exports = {
             {
                 test: /\.s?css$/,
                 use: [
-                    MiniCssExtractPlugin.loader,
+                    "style-loader",
                     "css-loader",
                     {
                         loader: "sass-loader",
