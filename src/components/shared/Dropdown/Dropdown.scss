@@ -1,39 +1,39 @@
 @import "variables.scss";
 
 .dropdown-container {
-    input {
-        border: solid 1px darkgrey;
+  input {
+    border: solid 1px darkgrey;
 
-        &:hover,
-        &:focus {
-            border-color: grey;
-            background-color: lightgrey;
-        }
+    &:hover,
+    &:focus {
+      border-color: grey;
+      background-color: lightgrey;
+    }
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: $grey;
+    box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    width: 100%;
+
+    a {
+      display: block;
+      color: black;
+      padding: 1.5vh $padding-input-sides;
+      text-decoration: none;
+      font-family: $font-family;
+      font-size: $font-size-btn;
+
+      &:hover {
+        background-color: #ddd;
+      }
     }
 
-    .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: $grey;
-        box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
-        z-index: 1;
-        width: 100%;
-
-        a {
-            display: block;
-            color: black;
-            padding: 1.5vh $padding-input-sides;
-            text-decoration: none;
-            font-family: $font-family;
-            font-size: $font-size-btn;
-
-            &:hover {
-                background-color: #ddd;
-            }
-        }
-
-        &.dropdown-open {
-            display: block;
-        }
+    &.dropdown-open {
+      display: block;
     }
+  }
 }

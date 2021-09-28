@@ -3,7 +3,7 @@
 .button {
   display: block;
   width: 100%;
-  margin: 0.5em 0em;
+  margin: 0.5em 0;
   padding: 1.2em 1em;
   border: none;
   border-color: unset;
@@ -20,19 +20,23 @@
   &.button-alt {
     background-color: $grey;
     color: black;
+
     &:active {
       background-color: $colored;
       color: black;
     }
   }
+
   &.button-default {
     background-color: $colored;
     color: black;
+
     &:active {
       background-color: $grey;
       color: black;
     }
   }
+
   &:disabled,
   &[disabled] {
     background-color: $grey;

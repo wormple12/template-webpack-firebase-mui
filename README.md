@@ -10,8 +10,11 @@ The current tech stack includes:
 - Firebase as database and hosting
 - Cypress as testing framework
 - Lottie for animated SVGs
+- eslint and stylelint as linting and formatting tools
 
 ### Template Development Pipeline
+
+- Is react-scripts necessary? Try removing it, and see if everything still works...
 
 - Material UI
 

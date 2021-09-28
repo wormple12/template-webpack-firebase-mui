@@ -1,33 +1,33 @@
 @import "variables.scss";
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html,
 body,
 body > div {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    margin: 0;
-    padding-bottom: 7vh;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding-bottom: 7vh;
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 body * {
-    -webkit-overflow-scrolling: touch;
-    //-webkit-tap-highlight-color: transparent; /* Disable iOS touch highlight */
-    font-family: $font-family-inter, Helvetica, sans-serif;
+  -webkit-overflow-scrolling: touch;
+  //-webkit-tap-highlight-color: transparent; /* Disable iOS touch highlight */
+  font-family: $font-family-inter, Helvetica, sans-serif;
 
-    &:not(input) {
-        //-webkit-user-select: none; /* Disable iOS text selection */
-    }
+  &:not(input) {
+    //-webkit-user-select: none; /* Disable iOS text selection */
+  }
 }
 
 h1,
@@ -41,60 +41,63 @@ span,
 a,
 label,
 button {
-    font-family: $font-family-inter;
-    color: black;
+  font-family: $font-family-inter;
+  color: black;
 }
+
 p,
 label,
 span {
-    margin: 0;
-    font-size: $font-size-desc;
+  margin: 0;
+  font-size: $font-size-desc;
 }
+
 h1 {
-    font-size: $font-size-h1;
+  font-size: $font-size-h1;
 }
+
 h2 {
-    font-size: $font-size-h2;
+  font-size: $font-size-h2;
 }
 
 input,
 button {
-    -webkit-appearance: none;
+  -webkit-appearance: none;
 }
 
 main {
-    padding: 2vh 6vw 2vh 6vw;
-    background-color: $white;
-    width: 100%;
-    height: 100%;
-    overflow-y: auto;
+  padding: 2vh 6vw 2vh 6vw;
+  background-color: $white;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
 
-    .content {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        width: 500px;
-        max-width: 100%;
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 500px;
+    max-width: 100%;
 
-        form {
-            width: 100%;
-            padding-bottom: 10px;
+    form {
+      width: 100%;
+      padding-bottom: 10px;
 
-            .inline {
-                display: inline-flex;
-                width: 100%;
-                margin: 0;
-            }
-        }
+      .inline {
+        display: inline-flex;
+        width: 100%;
+        margin: 0;
+      }
     }
+  }
 }
 
 .react-swipeable-view-container {
+  width: 100%;
+  height: 100%;
+
+  & > div {
     width: 100%;
     height: 100%;
-
-    & > div {
-        width: 100%;
-        height: 100%;
-    }
+  }
 }
