@@ -13,8 +13,12 @@ The current tech stack includes:
 
 ### Template Development Pipeline
 
-- Find optimal method to split into several versions of web design; (1) PC/Tablet and (2) Mobile.
-    - Material UI?
+- Material UI
+
+- CSS Modules
+
+- Transfer example features to another repo
+    - for libraries like recoil, firestore, fetch, lottie: replace their actual usage in this project with simple links to examples in the other repo.
 
 - Check the data fetching library Relay out. It should work well with the new Suspense API.
     - Relay requires GraphQL backend... see https://medium.com/@lukepighetti/yes-you-can-query-firebase-with-graphql-e79a45990f22
