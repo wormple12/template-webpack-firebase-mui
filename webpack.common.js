@@ -4,7 +4,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
-    mode: 'production',
     context: path.resolve(__dirname, 'src'),
     entry: "./index.tsx",
     output: {

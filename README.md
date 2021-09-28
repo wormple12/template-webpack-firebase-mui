@@ -26,8 +26,6 @@ The current tech stack includes:
 
 - Initial portfolio showcasing everything from Santanism to PC Builder, Spellcaster's Archive, Mapmaker Framework and the Unity Stealth Game to placeholders for eventual later projects like the Black Lemon Test Case.
 
-- Black Lemon Test Case for pc and mobile.
-
 - Spellcaster's Archive v2 as a Web App.
 
 - Spellcaster's Archive mobile helper.

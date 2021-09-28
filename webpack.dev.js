@@ -7,7 +7,7 @@ module.exports = merge(common, {
     devtool: 'eval-cheap-source-map', // https://webpack.js.org/configuration/devtool/
     devServer: {
         port: 9000,
-        contentBase: path.join(__dirname, 'dist'),
+        static: path.join(__dirname, 'dist'),
         compress: true,
         open: true,
         hot: true,
