@@ -7,6 +7,11 @@ type Props = {
     width?: string,
 };
 
+// See svg-react-loader
+// (https://github.com/jhamlet/svg-react-loader)
+// (https://www.svgator.com/help/getting-started/add-animated-svgs-to-react-website)
+// for non-json svg animations
+
 // See react-lottie
 // (https://github.com/chenqingspring/react-lottie/blob/master/src/index.js)
 // for more options
