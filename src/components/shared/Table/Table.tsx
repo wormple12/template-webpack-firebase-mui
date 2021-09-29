@@ -15,12 +15,12 @@ export const Table = <T, K extends keyof T>(props: Props<T, K>): JSX.Element => 
    const columns =
       props.columns !== undefined
          ? props.columns
-         : Object.keys(props.data[0]).map((e) => {
+         : Object.keys(props.data[0]).map(e => {
               return {
                  key: e,
                  header: e
                     .split('_')
-                    .map((str) => str[0].toUpperCase() + str.slice(1))
+                    .map(str => str[0].toUpperCase() + str.slice(1))
                     .join(' '),
               };
            });

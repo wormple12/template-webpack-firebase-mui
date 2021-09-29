@@ -16,7 +16,7 @@ type Props = {
    width?: string;
 };
 
-export const LottieAnim: React.FC<Props> = React.memo(function Preloader(props) {
+export const LottieAnim: React.FC<Props> = React.memo(function Preloader (props) {
    const animRef = useRef<HTMLDivElement>(null);
 
    const defaultOptions = {

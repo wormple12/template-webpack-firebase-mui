@@ -14,7 +14,7 @@ const syncAuthEffect: AtomEffect<boolean> = ({ setSelf, trigger }) => {
    }
 
    // Subscribe to auth changes and update the atom value
-   const unsubscribe = onAuthStateChanged(getAuth(), (user) => {
+   const unsubscribe = onAuthStateChanged(getAuth(), user => {
       if (user) {
          // User is signed in!
          setSelf(true);

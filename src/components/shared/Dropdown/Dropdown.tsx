@@ -12,7 +12,7 @@ type Props = {
    setValue: React.Dispatch<React.SetStateAction<string>> | ((value: string) => void);
 };
 
-export const Dropdown: React.FC<Props> = (props) => {
+export const Dropdown: React.FC<Props> = props => {
    const myRef = useRef<HTMLDivElement>(null);
    const [showDropdown, setShowDropdown] = useState(false);
 
@@ -32,17 +32,17 @@ export const Dropdown: React.FC<Props> = (props) => {
 
    return (
       <InputField
-         className="dropdown-container"
+         className='dropdown-container'
          label={props.label}
          value={props.value}
          onClick={openDropdown}
          inputAttributes={{ disabled: true }}
       >
          <div ref={myRef} className={`dropdown-content ${showDropdown ? 'dropdown-open' : 'dropdown-closed'}`}>
-            {props.options.map((option) => (
+            {props.options.map(option => (
                <a
                   key={option}
-                  href="#"
+                  href='#'
                   onClick={() => {
                      props.setValue(option);
                      setShowDropdown(false);

@@ -1,4 +1,4 @@
-import { default as React } from 'react';
+import React from 'react';
 
 import './Button.scss';
 
@@ -11,7 +11,7 @@ interface Props {
    autoFocus?: boolean;
 }
 
-export const Button: React.FC<Props> = (props) => {
+export const Button: React.FC<Props> = props => {
    const variant = props.variant || 'default';
    const className = `button button-${variant}`;
    const type = props.type || 'button';

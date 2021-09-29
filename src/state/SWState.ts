@@ -12,7 +12,7 @@ const syncStorageEffect: AtomEffect<SWSearch> = ({ onSet }) => {
    // Subscribe to local changes and update the server value
    let updateController: any = undefined;
 
-   onSet((searchState) => {
+   onSet(searchState => {
       clearTimeout(updateController);
       updateController = setTimeout(() => {
          db.updateSearch(searchState as SWSearch);

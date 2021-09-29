@@ -4,7 +4,7 @@ import { getCurrentUserID } from './auth';
 import { SWSearch, defaultSWSearch } from '@Types/SWSearch';
 
 class SWDatabase {
-   async getSearch(): Promise<SWSearch> {
+   async getSearch (): Promise<SWSearch> {
       const userId = getCurrentUserID();
       if (userId) {
          const docSnap = await getDoc(doc(firestore, 'tempData', 'users', userId, 'SWSearch'));
@@ -12,7 +12,7 @@ class SWDatabase {
       }
       return defaultSWSearch;
    }
-   async updateSearch(search: SWSearch): Promise<void> {
+   async updateSearch (search: SWSearch): Promise<void> {
       const userId = getCurrentUserID();
       if (userId) await setDoc(doc(firestore, 'tempData', 'users', userId, 'SWSearch'), search);
    }

@@ -7,11 +7,11 @@ type Props = {
    desc?: string;
 };
 
-export const ErrorBoundary: React.FC<Props> = (props) => {
+export const ErrorBoundary: React.FC<Props> = props => {
    return (
       <ReactErrorBoundary
          FallbackComponent={({ error, resetErrorBoundary }) => (
-            <div role="alert">
+            <div role='alert'>
                <h3>
                   {props.code}: {props.heading ? props.heading : 'An unknown error occurred:'}
                </h3>
@@ -23,9 +23,9 @@ export const ErrorBoundary: React.FC<Props> = (props) => {
          onReset={() => {
             sessionStorage.clear();
          }}
-         onError={() => {
+         /* onError={() => {
             return;
-         }}
+         }} */
       >
          {props.children}
       </ReactErrorBoundary>

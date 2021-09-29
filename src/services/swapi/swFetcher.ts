@@ -3,21 +3,23 @@ import { Pilot } from '@Types/SWSearch';
 const swFetcher = () => {
    const url = 'https://swapi.dev/api';
 
-   async function fetchStarshipsWithReqs(maxCost: number, minHDRating: number) {
+   async function fetchStarshipsWithReqs (maxCost: number, minHDRating: number) {
       let response = await fetch(`${url}/starships`);
       let data = await response.json();
       let starships = [...data.results];
+
       while (data.next !== null) {
          response = await fetch(data.next);
          data = await response.json();
          starships = [...starships, ...data.results];
       }
+
       return starships
-         .filter((e) => parseInt(e.cost_in_credits, 10) <= maxCost * 1000)
-         .filter((e) => parseFloat(e.hyperdrive_rating) >= minHDRating);
+         .filter(e => parseInt(e.cost_in_credits, 10) <= maxCost * 1000)
+         .filter(e => parseFloat(e.hyperdrive_rating) >= minHDRating);
    }
 
-   async function fetchPilot(pilot: Pilot) {
+   async function fetchPilot (pilot: Pilot) {
       const response = await fetch(`${url}/people/?search=${pilot}`);
       const data = await response.json();
       return data.results[0];
@@ -39,21 +41,21 @@ const swFetcher = () => {
 // Note: this is a simplified implementation of Suspense-friendly fetching such as Relay and React Query
 // It should not be used for production.
 // Origin: https://www.telerik.com/blogs/render-as-you-fetch-with-react-suspense
-function wrapPromise(promise) {
+function wrapPromise (promise) {
    let status = 'pending';
    let result;
    const suspender = promise.then(
-      (r) => {
+      r => {
          status = 'success';
          result = r;
       },
-      (e) => {
+      e => {
          status = 'error';
          result = e;
       },
    );
    return {
-      read() {
+      read () {
          if (status === 'pending') {
             throw suspender;
          } else if (status === 'error') {

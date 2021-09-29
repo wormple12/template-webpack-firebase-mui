@@ -1,4 +1,4 @@
 {
-    "video": false,
-    "componentFolder": "cypress/components"
+   "video": false,
+   "componentFolder": "cypress/components"
 }

@@ -23,10 +23,10 @@ https://sendgrid.com/blog/ideas-for-configuring-organizing-and-consolidating-you
 */
 
 describe('My First Test', () => {
-    it('should succeed', () => {
-        expect(true).to.be.true;
-    });
-    it('should fail on purpose', () => {
-        expect(true).to.be.false;
-    });
+   it('should succeed', () => {
+      expect(true).to.be.true;
+   });
+   it('should fail on purpose', () => {
+      expect(true).to.be.false;
+   });
 });

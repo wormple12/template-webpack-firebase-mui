@@ -7,19 +7,19 @@ import { NavBarProps } from '@Components/shared/NavBar/NavBar';
 import { signOut } from '@Services/firebase/auth';
 import { userAuthState } from '@State/UserState';
 
-export const MainRoutes: React.FC = (props) => {
+export const MainRoutes: React.FC = props => {
    const isUserSignedIn = useRecoilValue<boolean>(userAuthState);
 
    return isUserSignedIn ? (
       <Switch>
-         <Route exact path="/" component={Home} />
-         <Route exact path="/section01" component={Section01} />
-         <Route path="/section02" component={Section02} />
+         <Route exact path='/' component={Home} />
+         <Route exact path='/section01' component={Section01} />
+         <Route path='/section02' component={Section02} />
          <Route component={NoMatch} />
       </Switch>
    ) : (
       <Switch>
-         <Route exact path="/" component={SignIn} />
+         <Route exact path='/' component={SignIn} />
          <Route component={NoMatch} />
       </Switch>
    );
@@ -31,6 +31,6 @@ export const navTabs: NavBarProps = {
       { label: 'Home', path: '/', exact: true },
       { label: 'Test Recoil', path: '/section01', exact: true },
       { label: 'Test Suspense', path: '/section02' },
-      { label: 'Sign out', path: '/', onClick: signOut, float: 'right' },
+      { label: 'Sign out', path: '/', handleClick: signOut, float: 'right' },
    ],
 };

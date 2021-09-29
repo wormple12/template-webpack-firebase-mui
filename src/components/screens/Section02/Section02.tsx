@@ -5,16 +5,16 @@ import { swStarshipState, swPilotState } from '@State/SWState';
 import { SuspenseLoader } from '@Components/utilities';
 import { Table } from '@Components/shared';
 
-export const Section02: React.FC = (props) => {
+export const Section02: React.FC = props => {
    const starships = useRecoilValue(swStarshipState);
    const pilot = useRecoilValue(swPilotState);
 
    return (
-      <section className="content">
+      <section className='content'>
          {/* Needs error boundary for handling fetch errors */}
          <Suspense fallback={<SuspenseLoader />}>
             <h1>Testing Suspense</h1>
-            <p className="sectionDesc">Here are the results that pass your requirements.</p>
+            <p className='sectionDesc'>Here are the results that pass your requirements.</p>
             <br />
             <h2>Starships:</h2>
             <SuspendedGrid resource={starships} />
@@ -27,13 +27,13 @@ export const Section02: React.FC = (props) => {
 
 const SuspendedGrid: React.FC<{ resource }> = ({ resource }) => {
    const starships = resource.read();
-   starships.forEach((e) => (e.cost_in_credits = `${parseInt(e.cost_in_credits, 10) / 1000}K`));
+   starships.forEach(e => (e.cost_in_credits = `${parseInt(e.cost_in_credits, 10) / 1000}K`));
 
    return (
       <Table
-         id="swStarship-table"
+         id='swStarship-table'
          data={starships}
-         caption="Starships available for purchase that fit your requirements."
+         caption='Starships available for purchase that fit your requirements.'
       />
    );
 };

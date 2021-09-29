@@ -7,8 +7,8 @@ enum Pilots {
 }
 export type Pilot = keyof typeof Pilots;
 export const pilotOptions = Object.values(Pilots)
-   .filter((value) => isNaN(Number(value)))
-   .map((value) => value as Pilot);
+   .filter(value => isNaN(Number(value)))
+   .map(value => value as Pilot);
 
 export type SWSearch = {
    budget: number;

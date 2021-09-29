@@ -9,7 +9,7 @@ type NavTab = {
    label: string;
    path: string;
    exact?: boolean;
-   onClick?: () => void;
+   handleClick?: () => void;
    float?: 'right' | 'left';
 };
 export type NavBarProps = {
@@ -17,16 +17,16 @@ export type NavBarProps = {
    secureTabs: NavTab[];
 };
 
-export const NavBar: React.FC<NavBarProps> = (props) => {
+export const NavBar: React.FC<NavBarProps> = props => {
    const isUserSignedIn = useRecoilValue<boolean>(userAuthState);
    const tabs = isUserSignedIn ? props.secureTabs : props.noAuthTabs;
 
    return (
       <nav>
-         <ul className="header-nav-bar">
+         <ul className='header-nav-bar'>
             {tabs.map((tab, index) => (
                <li key={`${tab.label}-${index}`} className={tab.float ? tab.float : ''}>
-                  <NavLink activeClassName="active" exact={tab.exact} to={tab.path} onClick={tab.onClick}>
+                  <NavLink activeClassName='active' exact={tab.exact} to={tab.path} onClick={tab.handleClick}>
                      {tab.label}
                   </NavLink>
                </li>

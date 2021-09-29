@@ -1,4 +1,4 @@
-import { default as React, useState } from 'react';
+import React, { useState } from 'react';
 import './InputField.scss';
 
 type Props = {
@@ -14,7 +14,7 @@ type Props = {
    inputAttributes: React.HTMLProps<HTMLInputElement>;
 };
 
-export const InputField: React.FC<Props> = (props) => {
+export const InputField: React.FC<Props> = props => {
    const [hasInputFocus, setHasInputFocus] = useState(false);
 
    const inputFocusEvents = {
@@ -38,7 +38,7 @@ export const InputField: React.FC<Props> = (props) => {
          onClick={props.onClick}
       >
          {props.label && (
-            <label className="input-label" htmlFor={props.id && `${props.id}-field`}>
+            <label className='input-label' htmlFor={props.id && `${props.id}-field`}>
                {props.label}
             </label>
          )}
@@ -47,7 +47,7 @@ export const InputField: React.FC<Props> = (props) => {
             className={props.label ? 'with-label' : 'without-label'}
             value={props.value}
             type={type}
-            onChange={(e) => {
+            onChange={e => {
                if (props.setValue) props.setValue(e.target.value);
             }}
             {...props.inputAttributes}
@@ -55,7 +55,7 @@ export const InputField: React.FC<Props> = (props) => {
          />
          {hasClearButton && (
             <div
-               className="input-clear-button"
+               className='input-clear-button'
                onClick={() => {
                   if (props.setValue) props.setValue('');
                   if (props.inputAttributes.id) document.getElementById(props.inputAttributes.id)?.focus();
