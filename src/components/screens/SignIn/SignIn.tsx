@@ -26,7 +26,9 @@ export const SignIn: React.FC<Props> = props => {
       <section className='content'>
          <h1>{textContent.title}</h1>
          <p className='sectionDesc'>{textContent.desc}</p>
-         <Button onClick={onSubmit}>{textContent.submitBtn}</Button>
+         <Button onClick={onSubmit} variant='contained' size='large'>
+            {textContent.submitBtn}
+         </Button>
       </section>
    );
 };

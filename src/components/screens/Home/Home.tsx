@@ -38,10 +38,11 @@ export const Home: React.FC<Props> = props => {
                margin='dense'
                variant='standard'
                fullWidth
+               sx={{ marginBottom: '30px' }}
                value={search.budget.toString()}
                onChange={evt => setSearch({ ...search, budget: parseInt(evt.target.value, 10) })}
             />
-            <FormControl fullWidth>
+            <FormControl fullWidth sx={{ marginBottom: '30px' }}>
                <InputLabel id='min-hd-rating-label'>{textContent.inputRating}</InputLabel>
                <Select
                   labelId='min-hd-rating-label'
@@ -56,7 +57,7 @@ export const Home: React.FC<Props> = props => {
                   ))}
                </Select>
             </FormControl>
-            <FormControl fullWidth>
+            <FormControl fullWidth sx={{ marginBottom: '30px' }}>
                <InputLabel id='pilot-label'>{textContent.inputPilot}</InputLabel>
                <Select
                   labelId='pilot-label'
@@ -71,7 +72,9 @@ export const Home: React.FC<Props> = props => {
                   ))}
                </Select>
             </FormControl>
-            <Button type='submit'>{textContent.submitBtn}</Button>
+            <Button type='submit' variant='contained' size='large'>
+               {textContent.submitBtn}
+            </Button>
          </form>
       </section>
    );

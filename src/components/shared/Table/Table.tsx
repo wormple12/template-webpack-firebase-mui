@@ -50,27 +50,4 @@ export const Table = <T, K extends keyof T>(props: Props<T, K>): JSX.Element => 
          </Table_MUI>
       </TableContainer>
    );
-   /* return (
-      <div id={props.id} className={`table-container ${props.className}`}>
-         <table>
-            {props.caption && <caption>{props.caption}</caption>}
-            <thead>
-               <tr>
-                  {columns.map((e, index) => (
-                     <th key={`hCell-${index}`}>{e.header}</th>
-                  ))}
-               </tr>
-            </thead>
-            <tbody>
-               {props.data.map((row, index) => (
-                  <tr key={`row-${index}`}>
-                     {columns.map((column, index2) => (
-                        <td key={`cell-${index2}`}>{row[column.key]}</td>
-                     ))}
-                  </tr>
-               ))}
-            </tbody>
-         </table>
-      </div>
-   ); */
 };

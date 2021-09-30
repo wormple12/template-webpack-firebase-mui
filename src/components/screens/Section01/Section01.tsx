@@ -14,6 +14,7 @@ const textContent = {
 
 export const Section01: React.FC = props => {
    const { budget, minHDRating, preferredPilot } = useRecoilValue(swSearchState);
+   const formattedBudget = new Intl.NumberFormat('de-DE').format(budget * 1000);
 
    return (
       <section className='content'>
@@ -22,14 +23,15 @@ export const Section01: React.FC = props => {
          <br />
          <Card>
             <CardContent>
-               <span>{textContent.labelBudget}</span>
-               <span>{new Intl.NumberFormat('de-DE').format(budget * 1000)}</span>
-               <br />
-               <span>{textContent.labelRating}</span>
-               <span>{minHDRating.toFixed(1)}</span>
-               <br />
-               <span>{textContent.labelPilot}</span>
-               <span>{preferredPilot}</span>
+               <p>
+                  <b>{textContent.labelBudget}</b> {formattedBudget}
+               </p>
+               <p>
+                  <b>{textContent.labelRating}</b> {minHDRating.toFixed(1)}
+               </p>
+               <p>
+                  <b>{textContent.labelPilot}</b> {preferredPilot}
+               </p>
             </CardContent>
          </Card>
       </section>
