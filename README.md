@@ -1,11 +1,11 @@
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+[![Cypress.io](https://img.shields.io/badge/tested%20with-Cypress-04C38E.svg)](https://www.cypress.io/)
+
 <h1 align="center">Template Project</h1>
 
 <p align="center">
     This is a ready-to-use template project for personal projects.
 </p>
-
-[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
-[![Cypress.io](https://img.shields.io/badge/tested%20with-Cypress-04C38E.svg)](https://www.cypress.io/)
 
 #### Table of Contents
 
@@ -14,26 +14,30 @@
 3. [Template Development Pipeline](#template-development-pipeline)
 4. [Project Pipeline](#project-pipeline)
 5. [Notes](#notes)
-   a. [Updating global tools](#updating-global-tools)
-   b. [Clean reinstall of newest versions of all project packages](#clean-reinstall-of-newest-versions-of-all-project-packages)
+   1. [Updating global tools](#updating-global-tools)
+   2. [Clean reinstall of newest versions of all project packages](#clean-reinstall-of-newest-versions-of-all-project-packages)
 
 ### Tech Stack
 
 The current tech stack includes:
 
-|                                                                        Technology                                                                        |
-| :------------------------------------------------------------------------------------------------------------------------------------------------------: |
-|          <a href="https://github.com/webpack/webpack"><img width="48" height="48" src="https://webpack.js.org/assets/icon-square-big.svg"></a>           |
-|   <a href="https://github.com/babel/babel"><img width="48" height="48" title="babel-loader" src="https://worldvectorlogo.com/logos/babel-10.svg"></a>    |
-| <a href="https://github.com/microsoft/TypeScript"><img width="48" height="48" src="https://cdn.rawgit.com/Microsoft/TypeScript/master/doc/logo.svg"></a> |
-|             <a href="https://github.com/facebook/react"><img width="48" height="48" src="https://worldvectorlogo.com/logos/react-2.svg"></a>             |
-|                                       [Recoil](https://github.com/facebookexperimental/Recoil) as state management                                       |
-|       <a href="https://github.com/webpack-contrib/sass-loader"><img width="48" height="48" src="https://worldvectorlogo.com/logos/sass-1.svg"></a>       |
-|       <a href="https://github.com/firebase/firebase-tools"><img width="48" height="48" src="https://worldvectorlogo.com/logos/firebase-1.svg"></a>       |
-|                                          [Cypress](https://www.npmjs.com/package/cypress) as testing framework                                           |
-|                                                      [MaterialUI](https://mui.com/) as UI framework                                                      |
-|                                           [Lottie](https://www.npmjs.com/package/lottie-web) for animated SVGs                                           |
-|                           [prettier-standard](https://www.npmjs.com/package/prettier-standard) as linting and formatting tool                            |
+<a href="https://github.com/webpack/webpack"><img width="48" height="48" src="https://webpack.js.org/assets/icon-square-big.svg"></a>
+<a href="https://github.com/babel/babel"><img width="70" height="35" src="https://worldvectorlogo.com/logos/babel-10.svg"></a>
+<a href="https://github.com/microsoft/TypeScript"><img width="70" height="48" src="https://cdn.rawgit.com/Microsoft/TypeScript/master/doc/logo.svg"></a>
+<a href="https://github.com/facebook/react"><img width="48" height="48" src="https://worldvectorlogo.com/logos/react-2.svg"></a>
+<a href="https://github.com/firebase/firebase-tools"><img width="48" height="48" src="https://worldvectorlogo.com/logos/firebase-1.svg"></a>
+<a href="https://github.com/webpack-contrib/sass-loader"><img width="48" height="48" src="https://worldvectorlogo.com/logos/sass-1.svg"></a>
+
+-  [Webpack](https://github.com/webpack/webpack), [Babel](https://github.com/babel/babel) and [Typescript](https://github.com/microsoft/TypeScript)
+-  [ReactJS](https://github.com/facebook/react)
+   -  using Suspense API
+   -  w. [Recoil](https://github.com/facebookexperimental/Recoil) as state management
+-  [Firebase](https://github.com/firebase/firebase-tools) as database, storage and hosting
+-  [Cypress](https://www.npmjs.com/package/cypress) as testing framework
+-  [SCSS](https://github.com/webpack-contrib/sass-loader) as preprocessor CSS
+-  [MaterialUI](https://mui.com/) as UI framework
+-  [Lottie](https://www.npmjs.com/package/lottie-web) for animated SVGs
+-  [prettier-standard](https://www.npmjs.com/package/prettier-standard) as linting and formatting tool
 
 ### Getting Started
 
