@@ -2,9 +2,18 @@ import React from 'react';
 import { RouteComponentProps } from 'react-router-dom';
 import { useRecoilState } from 'recoil';
 
-import { InputField, Button, Dropdown } from '@Components/shared';
 import { swSearchState } from '@State/SWState';
 import { SWSearch, Pilot, pilotOptions } from '@Types/SWSearch';
+import { Button, FormControl, InputLabel, MenuItem, Select, TextField } from '@mui/material';
+
+const textContent = {
+   title: 'Starship Search',
+   desc: 'Fill in information below. Recoil will save it.',
+   inputBudget: 'Budget (in thousands)',
+   inputRating: 'Minimum Hyperdrive Rating',
+   inputPilot: 'Preferred Pilot',
+   submitBtn: 'Continue!',
+};
 
 type Props = RouteComponentProps;
 
@@ -18,37 +27,52 @@ export const Home: React.FC<Props> = props => {
 
    return (
       <section className='content'>
-         <h1>Starship Search</h1>
-         <p className='sectionDesc'>Fill in information below. Recoil will save it.</p>
+         <h1>{textContent.title}</h1>
+         <p className='sectionDesc'>{textContent.desc}</p>
          <br />
-         <form id='temp-form' onSubmit={onFormSubmit} target='#'>
-            <InputField
-               label='Budget (in thousands)'
+         <form autoComplete='off' onSubmit={onFormSubmit}>
+            <TextField
+               required
+               label={textContent.inputBudget}
+               type='number'
+               margin='dense'
+               variant='standard'
+               fullWidth
                value={search.budget.toString()}
-               setValue={(value: string) => setSearch({ ...search, budget: parseInt(value, 10) })}
-               inputAttributes={{
-                  type: 'number',
-                  min: '0',
-                  step: '1',
-                  pattern: '^[0-9]',
-               }}
+               onChange={evt => setSearch({ ...search, budget: parseInt(evt.target.value, 10) })}
             />
-            <Dropdown
-               label='Minimum Hyperdrive Rating'
-               options={['1.0', '2.0', '3.0', '4.0', '5.0', '6.0']}
-               value={search.minHDRating.toFixed(1).toString()}
-               setValue={(value: string) => setSearch({ ...search, minHDRating: parseFloat(value) })}
-            />
-            <Dropdown
-               label='Preferred Pilot'
-               options={pilotOptions}
-               value={search.preferredPilot}
-               setValue={(value: string) => setSearch({ ...search, preferredPilot: value as Pilot })}
-            />
+            <FormControl fullWidth>
+               <InputLabel id='min-hd-rating-label'>{textContent.inputRating}</InputLabel>
+               <Select
+                  labelId='min-hd-rating-label'
+                  value={search.minHDRating.toFixed(1).toString()}
+                  label={textContent.inputRating}
+                  onChange={evt => setSearch({ ...search, minHDRating: parseFloat(evt.target.value) })}
+               >
+                  {['1.0', '2.0', '3.0', '4.0', '5.0', '6.0'].map(option => (
+                     <MenuItem key={option} value={option}>
+                        {option}
+                     </MenuItem>
+                  ))}
+               </Select>
+            </FormControl>
+            <FormControl fullWidth>
+               <InputLabel id='pilot-label'>{textContent.inputPilot}</InputLabel>
+               <Select
+                  labelId='pilot-label'
+                  value={search.preferredPilot}
+                  label={textContent.inputPilot}
+                  onChange={evt => setSearch({ ...search, preferredPilot: evt.target.value as Pilot })}
+               >
+                  {pilotOptions.map(option => (
+                     <MenuItem key={option} value={option}>
+                        {option}
+                     </MenuItem>
+                  ))}
+               </Select>
+            </FormControl>
+            <Button type='submit'>{textContent.submitBtn}</Button>
          </form>
-         <Button type='submit' form='temp-form'>
-            Continue!
-         </Button>
       </section>
    );
 };

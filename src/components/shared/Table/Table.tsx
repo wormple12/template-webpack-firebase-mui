@@ -1,4 +1,7 @@
 import React from 'react';
+
+import { Paper, Table as Table_MUI, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';
+
 import './Table.scss';
 
 type Props<T, K extends keyof T> = {
@@ -26,6 +29,28 @@ export const Table = <T, K extends keyof T>(props: Props<T, K>): JSX.Element => 
            });
 
    return (
+      <TableContainer component={Paper} id={props.id} className={`table-container ${props.className}`}>
+         <Table_MUI size='small' aria-label={props.caption}>
+            <TableHead>
+               <TableRow>
+                  {columns.map((e, index) => (
+                     <TableCell key={`hCell-${index}`}>{e.header}</TableCell>
+                  ))}
+               </TableRow>
+            </TableHead>
+            <TableBody>
+               {props.data.map((row, index) => (
+                  <TableRow key={`row-${index}`}>
+                     {columns.map((column, index2) => (
+                        <TableCell key={`cell-${index2}`}>{row[column.key]}</TableCell>
+                     ))}
+                  </TableRow>
+               ))}
+            </TableBody>
+         </Table_MUI>
+      </TableContainer>
+   );
+   /* return (
       <div id={props.id} className={`table-container ${props.className}`}>
          <table>
             {props.caption && <caption>{props.caption}</caption>}
@@ -47,5 +72,5 @@ export const Table = <T, K extends keyof T>(props: Props<T, K>): JSX.Element => 
             </tbody>
          </table>
       </div>
-   );
+   ); */
 };

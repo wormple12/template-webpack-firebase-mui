@@ -2,28 +2,26 @@ import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { RecoilRoot } from 'recoil';
 
+import { Header } from './Header';
+import { SuspenseLoader, ErrorBoundary } from './utilities';
+import { MainRoutes } from './Routes';
+
 import '@Style/style.scss';
 import '@Style/variables.scss';
-
-import { NavBar } from './shared';
-import { SuspenseLoader, ErrorBoundary } from './utilities';
-import { MainRoutes, navTabs } from './Routes';
 
 const App: React.FC = () => {
    return (
       <RecoilRoot>
-         <ErrorBoundary>
-            <Router>
-               <header>
-                  <NavBar noAuthTabs={navTabs.noAuthTabs} secureTabs={navTabs.secureTabs} />
-               </header>
-               <main>
+         <Router>
+            <Header />
+            <main>
+               <ErrorBoundary>
                   <React.Suspense fallback={<SuspenseLoader />}>
                      <MainRoutes />
                   </React.Suspense>
-               </main>
-            </Router>
-         </ErrorBoundary>
+               </ErrorBoundary>
+            </main>
+         </Router>
       </RecoilRoot>
    );
 };

@@ -1,0 +1,12 @@
+@import 'variables.scss';
+
+.app-bar {
+  background-color: $colored;
+  button {
+    background-color: inherit;
+    &.active {
+      background-color: $grey;
+      color: $black;
+    }
+  }
+}

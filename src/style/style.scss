@@ -15,57 +15,31 @@ body > div {
   padding-bottom: 7vh;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
 body * {
   -webkit-overflow-scrolling: touch;
-  //-webkit-tap-highlight-color: transparent; /* Disable iOS touch highlight */
-  font-family: $font-family-inter, Helvetica, sans-serif;
-
-  &:not(input) {
-    //-webkit-user-select: none; /* Disable iOS text selection */
-  }
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-span,
-a,
-label,
-button {
-  font-family: $font-family-inter;
-  color: black;
+  font-family: $font-family, Helvetica, sans-serif;
 }
 
 p,
 label,
 span {
-  margin: 0;
+  margin: 0 0 15px 0;
   font-size: $font-size-desc;
 }
-
 h1 {
   font-size: $font-size-h1;
 }
-
 h2 {
   font-size: $font-size-h2;
 }
-
-input,
-button {
-  -webkit-appearance: none;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 main {
+  display: flex;
+  justify-content: center;
   padding: 2vh 6vw 2vh 6vw;
   background-color: $white;
   width: 100%;
@@ -75,29 +49,7 @@ main {
   .content {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    width: 500px;
-    max-width: 100%;
-
-    form {
-      width: 100%;
-      padding-bottom: 10px;
-
-      .inline {
-        display: inline-flex;
-        width: 100%;
-        margin: 0;
-      }
-    }
-  }
-}
-
-.react-swipeable-view-container {
-  width: 100%;
-  height: 100%;
-
-  & > div {
+    align-items: center;
     width: 100%;
-    height: 100%;
   }
 }

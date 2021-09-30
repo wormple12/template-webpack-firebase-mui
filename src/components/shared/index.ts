@@ -1,5 +1,2 @@
-export { InputField } from './InputField/InputField';
-export { Button } from './Button/Button';
-export { NavBar } from './NavBar/NavBar';
-export { Dropdown } from './Dropdown/Dropdown';
+export { AppBar } from './AppBar/AppBar';
 export { Table } from './Table/Table';

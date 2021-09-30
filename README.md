@@ -11,6 +11,7 @@ The current tech stack includes:
 -  SCSS as preprocessor CSS
 -  Firebase as database and hosting
 -  Cypress as testing framework
+-  MaterialUI as UI framework
 -  Lottie for animated SVGs
 -  prettier-standard as linting and formatting tool
 
@@ -36,8 +37,6 @@ The current tech stack includes:
 ### Template Development Pipeline
 
 -  Is react-scripts necessary? Try removing it, and see if everything still works...
-
--  Material UI
 
 -  CSS Modules
 
@@ -90,5 +89,6 @@ npm i -D @babel/preset-react
 npm i -D cypress @cypress/webpack-dev-server @cypress/react @testing-library/cypress
 npm i -D @types/lodash @types/react @types/react-dom @types/react-router-dom @types/cypress @types/chai
 npm i recoil recoil-persist
-npm i -D prettier-standard
+npm i @mui/material @emotion/react @emotion/styled @mui/icons-material
+npm i -D prettier-standard@16.3.0
 ```

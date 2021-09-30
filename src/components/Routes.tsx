@@ -3,7 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 import { useRecoilValue } from 'recoil';
 
 import { SignIn, Home, Section01, Section02, NoMatch } from './screens';
-import { NavBarProps } from '@Components/shared/NavBar/NavBar';
+import { NavButtonType } from '@Components/shared/AppBar/AppBar';
 import { signOut } from '@Services/firebase/auth';
 import { userAuthState } from '@State/UserState';
 
@@ -25,12 +25,30 @@ export const MainRoutes: React.FC = props => {
    );
 };
 
-export const navTabs: NavBarProps = {
-   noAuthTabs: [{ label: 'Sign in', path: '/', exact: true }],
-   secureTabs: [
-      { label: 'Home', path: '/', exact: true },
-      { label: 'Test Recoil', path: '/section01', exact: true },
-      { label: 'Test Suspense', path: '/section02' },
-      { label: 'Sign out', path: '/', handleClick: signOut, float: 'right' },
-   ],
+type NavButtonCollection = {
+   left: NavButtonType[];
+   right: NavButtonType[];
 };
+
+const getNavTabs = (): {
+   noAuthTabs: NavButtonCollection;
+   authTabs: NavButtonCollection;
+} => {
+   const commonTabs: NavButtonCollection = { left: [], right: [] };
+   return {
+      noAuthTabs: {
+         left: [...commonTabs.left, { content: 'Sign in', path: '/', exact: true }],
+         right: [...commonTabs.right],
+      },
+      authTabs: {
+         left: [
+            ...commonTabs.left,
+            { content: 'Home', path: '/', exact: true },
+            { content: 'Test Recoil', path: '/section01', exact: true },
+            { content: 'Test Suspense', path: '/section02' },
+         ],
+         right: [...commonTabs.right, { content: 'Sign out', path: '/', handleClick: signOut }],
+      },
+   };
+};
+export const navTabs = getNavTabs();
