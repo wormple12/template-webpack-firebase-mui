@@ -3,7 +3,7 @@ import { useRecoilValue } from 'recoil';
 
 import { swStarshipState, swPilotState } from '@State/SWState';
 import { SuspenseLoader } from '@Components/utilities';
-import { Table } from '@Components/shared';
+import { GenericTable } from '@Components/shared';
 import { Card, CardContent } from '@mui/material';
 
 const textContent = {
@@ -38,7 +38,7 @@ const SuspendedGrid: React.FC<{ resource }> = ({ resource }) => {
    const starships = resource.read();
    starships.forEach(e => (e.cost_in_credits = `${parseInt(e.cost_in_credits, 10) / 1000}K`));
 
-   return <Table id='swStarship-table' data={starships} caption={textContent.tableCaption} />;
+   return <GenericTable id='swStarship-table' data={starships} caption={textContent.tableCaption} />;
 };
 
 const SuspendedInfoBox: React.FC<{ resource }> = ({ resource }) => {

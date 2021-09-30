@@ -1,6 +1,38 @@
-# Template Project
+<h3 align="center">Template Project</h3>
 
-This is a ready-to-use template project for personal projects.
+<p align="center">
+    This is a ready-to-use template project for personal projects.
+</p>
+
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+
+<!-- TABLE OF CONTENTS -->
+<details open="open">
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#tech-stack">Tech Stack</a>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+    </li>
+    <li>
+      <a href="#template-development-pipeline">Template Development Pipeline</a>
+    </li>
+    <li>
+      <a href="#project-pipeline">Project Pipeline</a>
+    </li>
+    <li>
+      <a href="#notes">Notes</a>
+      <ul>
+        <li><a href="#updating-global-tools">Updating global tools</a></li>
+        <li><a href="#clean-reinstall-of-newest-versions-of-all-project-packages">Clean reinstall of newest versions of all project packages</a></li>
+      </ul>
+    </li>
+  </ol>
+</details>
+
+### Tech Stack
 
 The current tech stack includes:
 
@@ -15,14 +47,17 @@ The current tech stack includes:
 -  Lottie for animated SVGs
 -  prettier-standard as linting and formatting tool
 
-### How to use
+### Getting Started
 
--  Make sure to have Node.js, npm and firebase-tools installed globally (see further below for reinstall)
+-  Make sure to have Node.js, npm and firebase-tools installed globally (see further below for clean reinstall)
 -  `npm i`
 -  Delete unneeded packages and files (e.g. recoil)
+   -  (TO DO) Expand on this.
 -  Update "name", "version", "description" and "repository" in package.json
 -  Update HTMLWebpackPlugin attributes in webpack.common.js
 -  Update .firebaserc and firebase.config.ts
+-  Update LICENSE.txt
+-  Update README.md
 
 **Preferably, but not necessary:**
 
@@ -38,7 +73,12 @@ The current tech stack includes:
 
 -  Is react-scripts necessary? Try removing it, and see if everything still works...
 
--  CSS Modules
+-  Find a way to ensure 'single source of truth' when it comes to CSS
+
+   -  CSS Modules does not seem to fix the issue, unless you create typing files for each and every scss file. (see https://medium.com/@sapegin/css-modules-with-typescript-and-webpack-6b221ebe5f10, package no longer maintained)
+   -  I could use styled-components instead, but this would entirely replace SCSS, and I would have to find out how to use CSS functions such as 'clamp' in JS.
+
+-  Precommit hook for linting and formatting (see https://prettier.io/docs/en/precommit.html)
 
 -  Transfer example features to another repo
 
@@ -58,6 +98,8 @@ The current tech stack includes:
 -  Spellcaster's Archive v2 as a Web App.
 
 -  Spellcaster's Archive mobile helper.
+
+-  forsøgsperson.dk
 
 ### Notes
 

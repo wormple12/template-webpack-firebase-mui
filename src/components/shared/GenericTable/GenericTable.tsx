@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { Paper, Table as Table_MUI, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';
+import { Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';
 
-import './Table.scss';
+import './GenericTable.scss';
 
 type Props<T, K extends keyof T> = {
    id?: string;
@@ -12,7 +12,7 @@ type Props<T, K extends keyof T> = {
    caption?: string;
 };
 
-export const Table = <T, K extends keyof T>(props: Props<T, K>): JSX.Element => {
+export const GenericTable = <T, K extends keyof T>(props: Props<T, K>): JSX.Element => {
    if (props.data.length === 0) return <p>No data was found.</p>;
 
    const columns =
@@ -30,7 +30,7 @@ export const Table = <T, K extends keyof T>(props: Props<T, K>): JSX.Element => 
 
    return (
       <TableContainer component={Paper} id={props.id} className={`table-container ${props.className}`}>
-         <Table_MUI size='small' aria-label={props.caption}>
+         <Table size='small' aria-label={props.caption}>
             <TableHead>
                <TableRow>
                   {columns.map((e, index) => (
@@ -47,7 +47,7 @@ export const Table = <T, K extends keyof T>(props: Props<T, K>): JSX.Element => 
                   </TableRow>
                ))}
             </TableBody>
-         </Table_MUI>
+         </Table>
       </TableContainer>
    );
 };
