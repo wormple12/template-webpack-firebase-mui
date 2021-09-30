@@ -52,7 +52,7 @@
       "file-loader": "^6.2.0",
       "html-webpack-loader": "^0.0.5",
       "image-webpack-loader": "^7.0.1",
-      "prettier-standard": "^16.4.1",
+      "prettier-standard": "^16.3.0",
       "sass": "^1.42.1",
       "sass-loader": "^12.1.0",
       "style-loader": "^3.3.0",
