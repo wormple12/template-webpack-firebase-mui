@@ -1,51 +1,39 @@
-<h3 align="center">Template Project</h3>
+<h1 align="center">Template Project</h1>
 
 <p align="center">
     This is a ready-to-use template project for personal projects.
 </p>
 
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+[![Cypress.io](https://img.shields.io/badge/tested%20with-Cypress-04C38E.svg)](https://www.cypress.io/)
 
-<!-- TABLE OF CONTENTS -->
-<details open="open">
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#tech-stack">Tech Stack</a>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-    </li>
-    <li>
-      <a href="#template-development-pipeline">Template Development Pipeline</a>
-    </li>
-    <li>
-      <a href="#project-pipeline">Project Pipeline</a>
-    </li>
-    <li>
-      <a href="#notes">Notes</a>
-      <ul>
-        <li><a href="#updating-global-tools">Updating global tools</a></li>
-        <li><a href="#clean-reinstall-of-newest-versions-of-all-project-packages">Clean reinstall of newest versions of all project packages</a></li>
-      </ul>
-    </li>
-  </ol>
-</details>
+#### Table of Contents
+
+1. [Tech Stack](#tech-stack)
+2. [Getting Started](#getting-started)
+3. [Template Development Pipeline](#template-development-pipeline)
+4. [Project Pipeline](#project-pipeline)
+5. [Notes](#notes)
+   a. [Updating global tools](#updating-global-tools)
+   b. [Clean reinstall of newest versions of all project packages](#clean-reinstall-of-newest-versions-of-all-project-packages)
 
 ### Tech Stack
 
 The current tech stack includes:
 
--  Webpack, Babel and TypeScript
--  ReactJS
-   -  using Suspense API
-   -  w. Recoil as state management
--  SCSS as preprocessor CSS
--  Firebase as database and hosting
--  Cypress as testing framework
--  MaterialUI as UI framework
--  Lottie for animated SVGs
--  prettier-standard as linting and formatting tool
+|                                                                        Technology                                                                        |
+| :------------------------------------------------------------------------------------------------------------------------------------------------------: |
+|          <a href="https://github.com/webpack/webpack"><img width="48" height="48" src="https://webpack.js.org/assets/icon-square-big.svg"></a>           |
+|   <a href="https://github.com/babel/babel"><img width="48" height="48" title="babel-loader" src="https://worldvectorlogo.com/logos/babel-10.svg"></a>    |
+| <a href="https://github.com/microsoft/TypeScript"><img width="48" height="48" src="https://cdn.rawgit.com/Microsoft/TypeScript/master/doc/logo.svg"></a> |
+|             <a href="https://github.com/facebook/react"><img width="48" height="48" src="https://worldvectorlogo.com/logos/react-2.svg"></a>             |
+|                                       [Recoil](https://github.com/facebookexperimental/Recoil) as state management                                       |
+|       <a href="https://github.com/webpack-contrib/sass-loader"><img width="48" height="48" src="https://worldvectorlogo.com/logos/sass-1.svg"></a>       |
+|       <a href="https://github.com/firebase/firebase-tools"><img width="48" height="48" src="https://worldvectorlogo.com/logos/firebase-1.svg"></a>       |
+|                                          [Cypress](https://www.npmjs.com/package/cypress) as testing framework                                           |
+|                                                      [MaterialUI](https://mui.com/) as UI framework                                                      |
+|                                           [Lottie](https://www.npmjs.com/package/lottie-web) for animated SVGs                                           |
+|                           [prettier-standard](https://www.npmjs.com/package/prettier-standard) as linting and formatting tool                            |
 
 ### Getting Started
 
@@ -83,6 +71,8 @@ The current tech stack includes:
 -  Transfer example features to another repo
 
    -  for libraries like recoil, firestore, fetch, lottie: replace their actual usage in this project with simple links to examples in the other repo.
+
+-  Test more thoroughly, achieve code coverage
 
 -  Check the data fetching library Relay out. It should work well with the new Suspense API.
 
