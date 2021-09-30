@@ -17,7 +17,7 @@
    1. [Updating global tools](#updating-global-tools)
    2. [Clean reinstall of newest versions of all project packages](#clean-reinstall-of-newest-versions-of-all-project-packages)
 
-### Tech Stack
+## Tech Stack
 
 The current tech stack includes:
 
@@ -39,7 +39,7 @@ The current tech stack includes:
 -  [Lottie](https://www.npmjs.com/package/lottie-web) for animated SVGs
 -  [prettier-standard](https://www.npmjs.com/package/prettier-standard) as linting and formatting tool
 
-### Getting Started
+## Getting Started
 
 -  Make sure to have Node.js, npm and firebase-tools installed globally (see further below for clean reinstall)
 -  `npm i`
@@ -61,7 +61,7 @@ The current tech stack includes:
 "editor.formatOnSave": true,
 ```
 
-### Template Development Pipeline
+## Template Development Pipeline
 
 -  Is react-scripts necessary? Try removing it, and see if everything still works...
 
@@ -85,7 +85,7 @@ The current tech stack includes:
 
 -  Feature-driven architecture? https://www.blog.duomly.com/how-to-create-frontend-project-structure-that-scales-and-is-easy-to-maintain/
 
-### Project Pipeline
+## Project Pipeline
 
 -  Initial portfolio showcasing everything from Santanism to PC Builder, Spellcaster's Archive, Mapmaker Framework and the Unity Stealth Game to placeholders for eventual later projects like the Black Lemon Test Case.
 
@@ -95,9 +95,9 @@ The current tech stack includes:
 
 -  forsøgsperson.dk
 
-### Notes
+## Notes
 
-##### Updating global tools
+#### Updating global tools
 
 -  Uninstall Node and npm
    -  Uninstall Node from Windows applications
@@ -107,7 +107,7 @@ The current tech stack includes:
 -  `npm i -g npm`
 -  `npm i -g firebase-tools`
 
-##### Clean reinstall of newest versions of all project packages
+#### Clean reinstall of newest versions of all project packages
 
 -  `rm -rf node_modules`
 -  delete package.json and package-lock.json
