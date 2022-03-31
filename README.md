@@ -1,10 +1,10 @@
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 [![Cypress.io](https://img.shields.io/badge/tested%20with-Cypress-04C38E.svg)](https://www.cypress.io/)
 
-<h1 align="center">Template Project</h1>
+<h1 align="center">(Deprecated) Template Project</h1>
 
 <p align="center">
-    This is a ready-to-use template project for personal projects.
+    Use https://github.com/wormple12/template-vite-firebase-mui instead!
 </p>
 
 #### Table of Contents
